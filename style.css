@@ -31,4 +31,6 @@ a {
     white-space: pre-line;   /* Giữ các dấu Enter */
     line-height: 1.8;        /* Giãn dòng dễ đọc */
     word-wrap: break-word;   /* Tự xuống dòng khi hết chiều ngang */
+    font-size: 18px;
+    margin-top: 20px;
 }
