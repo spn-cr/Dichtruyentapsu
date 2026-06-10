@@ -1,0 +1,29 @@
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+}
+
+.story {
+    background: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+.chapter {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+}
