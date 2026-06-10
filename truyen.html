@@ -76,8 +76,8 @@ fetch("data/truyen.json")
         const p = document.createElement("p");
 
         p.innerHTML = `
-            <a href="${chuong.file}" target="_blank">
-                Chương ${chuong.so}: ${chuong.ten}
+            <a href="doc.html?id=${truyen.id}&chuong=${chuong.so}">
+              Chương ${chuong.so}: ${chuong.ten}
             </a>
         `;
 
