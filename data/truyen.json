@@ -10,14 +10,14 @@
 
       "chuong": [
         {
-          "so": 788(1),
+          "so": "789"
           "ten": "Tuyệt cảnh như vậy",
-          "file": "chapters/nha-tien-nhan-788.txt"
+          "file": "chapters/nha-tien-nhan-789-1.txt"
         },
         {
-          "so": 788(2),
+          "so": "789(2)"
           "ten": "Tuyệt cảnh như vậy",
-          "file": "chapters/nha-tien-nhan-789.txt"
+          "file": "chapters/nha-tien-nhan-789-2.txt"
         },
         {
           "so": 880,
