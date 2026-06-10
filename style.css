@@ -26,4 +26,9 @@ a {
     margin: auto;
     background: white;
     padding: 20px;
+
+    /* Thêm 3 dòng này */
+    white-space: pre-line;   /* Giữ các dấu Enter */
+    line-height: 1.8;        /* Giãn dòng dễ đọc */
+    word-wrap: break-word;   /* Tự xuống dòng khi hết chiều ngang */
 }
