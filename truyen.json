@@ -1,0 +1,30 @@
+{
+  "truyen": [
+    {
+      "id": "nha-tien-nhan",
+      "ten": "Nhà Tiên Nhân",
+      "tacgia": "Phong Nhất Quyển",
+      "dichgia": "SPN-CR",
+      "gioithieu": "Một câu chuyện về hành trình tu tiên đầy gian nan.",
+      "anhbia": "images/nha-tien-nhan.jpg",
+
+      "chuong": [
+        {
+          "so": 788(1),
+          "ten": "Tuyệt cảnh như vậy",
+          "file": "chapters/nha-tien-nhan-788.txt"
+        },
+        {
+          "so": 788(2),
+          "ten": "Tuyệt cảnh như vậy",
+          "file": "chapters/nha-tien-nhan-789.txt"
+        },
+        {
+          "so": 880,
+          "ten": "Lại một viên kỳ tinh",
+          "file": "chapters/nha-tien-nhan-880.txt"
+        }
+      ]
+    }
+  ]
+}
