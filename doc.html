@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đọc truyện</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="chapter">
+    <h1 id="chapter-title">Đang tải...</h1>
+
+    <div id="chapter-content"></div>
+
+    <hr>
+
+    <p>
+        <a id="back-link" href="#">⬅ Quay lại mục lục</a>
+    </p>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const storyId = params.get("id");
+const chapterSo = params.get("chuong");
+
+fetch("data/truyen.json")
+  .then(response => response.json())
+  .then(data => {
+
+    const truyen = data.truyen.find(item => item.id === storyId);
+
+    if (!truyen) {
+      document.getElementById("chapter-title").innerText = "Không tìm thấy truyện!";
+      return;
+    }
+
+    const chuong = truyen.chuong.find(item => item.so == chapterSo);
+
+    if (!chuong) {
+      document.getElementById("chapter-title").innerText = "Không tìm thấy chương!";
+      return;
+    }
+
+    document.getElementById("chapter-title").innerText =
+      "Chương " + chuong.so + ": " + chuong.ten;
+
+    document.getElementById("back-link").href =
+      "truyen.html?id=" + truyen.id;
+
+    return fetch(chuong.file);
+  })
+  .then(response => response.text())
+  .then(text => {
+    document.getElementById("chapter-content").innerText = text;
+  })
+  .catch(error => {
+    console.error(error);
+  });
+</script>
+
+</body>
+</html>
