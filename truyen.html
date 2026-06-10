@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Mục lục truyện</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #chapter-list a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        #chapter-list p {
+            margin: 10px 0;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1 id="story-title">Đang tải...</h1>
+
+    <p id="story-info"></p>
+
+    <hr>
+
+    <h2>📑 Mục lục</h2>
+
+    <div id="chapter-list">
+        <!-- JavaScript sẽ tự tạo danh sách chương ở đây -->
+    </div>
+
+    <br>
+
+    <a href="index.html">⬅ Quay lại trang chủ</a>
+
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const storyId = params.get("id");
+
+fetch("data/truyen.json")
+  .then(response => response.json())
+  .then(data => {
+
+    const truyen = data.truyen.find(item => item.id === storyId);
+
+    if (!truyen) {
+        document.getElementById("story-title").innerText = "Không tìm thấy truyện!";
+        return;
+    }
+
+    document.getElementById("story-title").innerText = truyen.ten;
+
+    document.getElementById("story-info").innerText =
+        "Tác giả: " + truyen.tacgia + " | Dịch: " + truyen.dichgia;
+
+    const chapterList = document.getElementById("chapter-list");
+
+    truyen.chuong.forEach(chuong => {
+
+        const p = document.createElement("p");
+
+        p.innerHTML = `
+            <a href="${chuong.file}" target="_blank">
+                Chương ${chuong.so}: ${chuong.ten}
+            </a>
+        `;
+
+        chapterList.appendChild(p);
+    });
+
+  })
+  .catch(error => {
+      console.error("Lỗi:", error);
+  });
+</script>
+
+</body>
+</html>
