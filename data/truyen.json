@@ -37,17 +37,17 @@
         {
           "so": 1,
           "ten": "Trương Thiết",
-          "file": "chapters/pham-nhan-luyen-the-001.txt"
+          "file": "chapters/pham-nhan-luyen-the-chuong-001.txt"
         },
         {
           "so": 2,
           "ten": "Biến Cố Bất Ngờ",
-          "file": "chapters/pham-nhan-luyen-the-002.txt"
+          "file": "chapters/pham-nhan-luyen-the-chuong-002.txt"
         },
         {
           "so": 3,
           "ten": "Dị Biến",
-          "file": "chapters/pham-nhan-luyen-the-003.txt"
+          "file": "chapters/pham-nhan-luyen-the-chuong-003.txt"
         }
       ]
     }
