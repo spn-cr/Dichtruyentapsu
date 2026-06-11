@@ -33,22 +33,22 @@
       "gioithieu": "Han Du, một thanh niên thất nghiệp, xuyên không đến một thế giới khác và trở thành một đệ tử hầu hạ cấp thấp trong một môn phái tu luyện. May mắn thay, cậu ta có được một tấm luyện chế vũ khí ma thuật. Dao bếp + đất đen + mắt rồng = Sát Long Nhân...",
       "anhbia": "images/pham-nhan-luyen-the.jpg",
       "chuong": [
-  {
-    "so": 1,
-    "ten": "Trương Thiết",
-    "file": "chapters/pham-nhan-luyen-the/pham-nhan-luyen-the-chuong-001.txt"
-  },
-  {
+     {
+      "so": 1,
+      "ten": "Trương Thiết",
+      "file": "chapters/pham-nhan-luyen-the/pham-nhan-luyen-the-chuong-001.txt"
+      },
+     {
     "so": 2,
     "ten": "Biến Cố Bất Ngờ",
     "file": "chapters/pham-nhan-luyen-the/pham-nhan-luyen-the-chuong-002.txt"
-  },
-  {
+     },
+     {
     "so": 3,
     "ten": "Dị Biến",
     "file": "chapters/pham-nhan-luyen-the/pham-nhan-luyen-the-chuong-003.txt"
-  }
-]
+     }
+    ]
     }
   ]
 }
