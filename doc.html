@@ -15,9 +15,13 @@
 
     <hr>
 
-    <p>
-        <a id="back-link" href="#">⬅ Quay lại mục lục</a>
-    </p>
+    <div class="chapter-nav">
+        <a id="prev-link" href="#">⬅ Chương trước</a>
+
+        <a id="toc-link" href="#">📑 Mục lục</a>
+
+        <a id="next-link" href="#">Chương sau ➡</a>
+    </div>
 </div>
 
 <script>
@@ -46,8 +50,32 @@ fetch("data/truyen.json")
     document.getElementById("chapter-title").innerText =
       "Chương " + chuong.so + ": " + chuong.ten;
 
-    document.getElementById("back-link").href =
+    // Link về mục lục
+    document.getElementById("toc-link").href =
       "truyen.html?id=" + truyen.id;
+
+    // Tìm vị trí chương hiện tại
+    const index = truyen.chuong.findIndex(
+      item => item.so == chapterSo
+    );
+
+    // Nút Chương trước
+    if (index > 0) {
+      document.getElementById("prev-link").href =
+        "doc.html?id=" + truyen.id +
+        "&chuong=" + truyen.chuong[index - 1].so;
+    } else {
+      document.getElementById("prev-link").style.visibility = "hidden";
+    }
+
+    // Nút Chương sau
+    if (index < truyen.chuong.length - 1) {
+      document.getElementById("next-link").href =
+        "doc.html?id=" + truyen.id +
+        "&chuong=" + truyen.chuong[index + 1].so;
+    } else {
+      document.getElementById("next-link").style.visibility = "hidden";
+    }
 
     return fetch(chuong.file);
   })
