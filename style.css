@@ -48,3 +48,83 @@ a {
     margin: 10px auto;
     max-width: 700px;
 }
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+}
+
+.story {
+    background: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+.chapter {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+
+    /* Thêm 3 dòng này */
+    white-space: pre-line;
+    line-height: 1.8;
+    word-wrap: break-word;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+#story-cover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+#story-title {
+    text-align: center;
+}
+
+#story-info,
+#story-desc {
+    text-align: center;
+    margin: 10px auto;
+    max-width: 700px;
+}
+
+/* ===== Thêm từ đây ===== */
+
+.chapter-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px auto;
+    max-width: 700px;
+}
+
+.chapter-nav a {
+    flex: 1;
+    margin: 0 8px;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 0;
+    background: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.chapter-nav a:hover {
+    background: #e5e5e5;
+}
+
+/* ===== Thêm đến đây ===== */
