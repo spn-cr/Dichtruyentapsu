@@ -31,9 +31,13 @@
 
 <div class="container">
 
+    <img id="story-cover" src="" alt="Ảnh bìa" style="max-width:200px; display:block; margin:20px auto; border-radius:10px;">
+
     <h1 id="story-title">Đang tải...</h1>
 
     <p id="story-info"></p>
+
+    <p id="story-desc"></p>
 
     <hr>
 
@@ -64,10 +68,15 @@ fetch("data/truyen.json")
         return;
     }
 
+    document.getElementById("story-cover").src = truyen.anhbia;
+
     document.getElementById("story-title").innerText = truyen.ten;
 
     document.getElementById("story-info").innerText =
-        "Tác giả: " + truyen.tacgia + " | Dịch: " + truyen.dichgia;
+    "Tác giả: " + truyen.tacgia + " | Dịch giả: " + truyen.dichgia;
+
+    document.getElementById("story-desc").innerText =
+    truyen.gioithieu;
 
     const chapterList = document.getElementById("chapter-list");
 
